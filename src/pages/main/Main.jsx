@@ -4,6 +4,7 @@ import autumnImage from '../../assets/images/autumn.jpg';
 import winterImage from '../../assets/images/winter.jpg';
 import { useEffect, useState } from 'react';
 import styles from "./Main.module.css"
+import { useNavigate } from 'react-router-dom';
 
 
 function Main(){
@@ -24,9 +25,11 @@ function Main(){
         }
     }, []);
 
+    const navigate = useNavigate()
+
     return(
         <div className={styles.mainStyle}  style={{ backgroundImage: `url(${backgroundImage})` }}>
-           <div className={styles.mainDiv}>
+           <div className={styles.mainDiv} onClick={() => {navigate("/todo")}}>
             <p className={styles.mainText}>Todo List</p>
            </div>
            <div className={styles.mainDiv}>
