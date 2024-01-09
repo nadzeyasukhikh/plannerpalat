@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    background-color: #355C7D;
+}
+.title{
+    font-size: 25px;
+    color: #F8B195;
+    margin-bottom: 10px;
+}
+.text{
+    font-size: 20px;
+    color: #F67280; 
+    margin-bottom: 5px;
+}
+.textTxt{
+    font-size: 20px;
+    color: #F67280; 
+    padding-left: 3px;
+}
