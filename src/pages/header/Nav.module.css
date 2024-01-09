@@ -1,0 +1,40 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: #355C7D;
+}
+
+.imgTxt{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.link{
+    display: flex;
+    gap: 25px;
+}
+.logoImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.titleLogo{
+    font-size: 25px;
+    color: #F8B195;
+}
+.timeStyle{
+    font-size: 20px;
+    color: #F67280;
+}
+.linkStyles{
+    font-size: 20px;
+    text-decoration: none;
+    color: #C06C84;
+    transition: 0.5s;
+}
+.linkStyles:hover{
+    color: #6C5B7B; 
+    transition: 0.5s;
+}
