@@ -1,0 +1,15 @@
+.menuDiv{
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconStyle{
+    width: 200px;
+    height: 200px;
+    margin-left: 15px;
+}

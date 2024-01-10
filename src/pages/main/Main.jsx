@@ -32,7 +32,7 @@ function Main(){
            <div className={styles.mainDiv} onClick={() => {navigate("/todo")}}>
             <p className={styles.mainText}>Todo List</p>
            </div>
-           <div className={styles.mainDiv}>
+           <div className={styles.mainDiv} onClick={() => {navigate("/menu")}}>
             <p className={styles.mainText}>Menu</p>
            </div>
 

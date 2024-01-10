@@ -1,0 +1,22 @@
+.menuDiv{
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.categoryesDiv{
+    width: 150;
+    background-color: #6C5B7B; 
+    padding: 30px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.categoryesText{
+    color: #F8B195;
+    font-size: 30px;
+}

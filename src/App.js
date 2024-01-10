@@ -5,6 +5,8 @@ import Nav from './pages/header/Nav';
 import Main from './pages/main/Main';
 import Footer from './pages/footer/Footer';
 import TodoList from './pages/todoList/TodoList';
+import Menu from './pages/menu/Menu';
+import MenuCategoryes from './components/MenuCategoryes';
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/todo" element={<TodoList />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/caregoryes" element={<MenuCategoryes />} />
       </Routes>
      <Footer />
     </div>
