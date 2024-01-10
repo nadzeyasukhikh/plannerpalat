@@ -10,30 +10,31 @@ function MenuCategoryes(){
     const [backgroundImage, setBackgroundImage] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:3001/categories') 
-            .then(response => {
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/categories');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                return response.json();
-            })
-            .then(data => {
+                const data = await response.json();
                 setCategories(data);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error('Error fetching categories:', error);
-            });
-
-            const month = new Date().getMonth();
-            if (month >= 3 && month < 6) {
-                setBackgroundImage(spring);
-            } else if (month >= 6 && month < 9) {
-                setBackgroundImage(summer);
-            } else if (month >= 9 && month < 12) {
-                setBackgroundImage(autumn);
-            } else {
-                setBackgroundImage(winter);
             }
+        };
+
+        fetchCategories();
+
+        const month = new Date().getMonth();
+        if (month >= 3 && month < 6) {
+            setBackgroundImage(spring);
+        } else if (month >= 6 && month < 9) {
+            setBackgroundImage(summer);
+        } else if (month >= 9 && month < 12) {
+            setBackgroundImage(autumn);
+        } else {
+            setBackgroundImage(winter);
+        }
         }, []);
 
 
