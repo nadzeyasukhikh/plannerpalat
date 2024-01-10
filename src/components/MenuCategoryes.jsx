@@ -40,12 +40,18 @@ function MenuCategoryes(){
 
     return (
         <div className={styles.menuDiv} style={{ backgroundImage: `url(${backgroundImage})` }}>
+             <h2 className={styles.title}>CATEGORIES</h2>
+            <div className={styles.cardDiv}>
+               
         {categories.map(category => (
-        <div key={category.id}>
-            <h2>{category.name}</h2>
+            
+        <div className={styles.card} key={category.id}>
+            <h2 className={styles.name}>{category.name}</h2>
             <img className={styles.iconStyle} src={`http://localhost:3001${category.imageUrl}`} alt={category.name} />
         </div>
+        
     ))}
+        </div>
         </div>
     )
 }
