@@ -28,7 +28,9 @@ function Menu(){
         }, []);
 
     return(
+    
         <div className={styles.menuDiv} style={{ backgroundImage: `url(${backgroundImage})` }}>
+        
             <div className={styles.categoryesDiv} onClick={() => navigate("/caregoryes")}>
                 <p className={styles.categoryesText}>CATEGORIES</p>
             </div>
@@ -36,9 +38,10 @@ function Menu(){
                 <p className={styles.categoryesText}>ALL RECIPES</p>
             </div>
             <div className={styles.categoryesDiv}>
-                <p className={styles.categoryesText}>ADD RECIPE</p>
+                <p className={styles.categoryesText} onClick={() => navigate("/addrecipe")}>ADD RECIPE</p>
             </div>
             </div>
+           
     )
 }
 export default Menu

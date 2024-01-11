@@ -16,6 +16,7 @@
     width: 200px;
     height: 180px;
     border-radius: 12px;
+    cursor: pointer;
 }
 .name{
     font-size: 30px;

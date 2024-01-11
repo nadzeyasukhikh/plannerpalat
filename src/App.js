@@ -7,6 +7,7 @@ import Footer from './pages/footer/Footer';
 import TodoList from './pages/todoList/TodoList';
 import Menu from './pages/menu/Menu';
 import MenuCategoryes from './components/MenuCategoryes';
+import AddRecipe from './components/AddRecipe';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/todo" element={<TodoList />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/caregoryes" element={<MenuCategoryes />} />
+        <Route path="/addrecipe" element={<AddRecipe />} />
       </Routes>
      <Footer />
     </div>
