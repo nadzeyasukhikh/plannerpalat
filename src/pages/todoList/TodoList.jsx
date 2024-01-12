@@ -1,26 +1,11 @@
 import { useEffect, useState } from "react";
-import autumn from "../../assets/images/todoautumn.jpg"
-import spring from "../../assets/images/todospring.jpg"
-import summer from "../../assets/images/todosummer.jpg"
-import winter from "../../assets/images/todowinter.jpg"
 import styles from "./TodoList.module.css"
+import useBackgroundImage from "../../useBackgroundImage";
 
 function TodoList(){
-    const [backgroundImage, setBackgroundImage] = useState('');
+    
 
-    useEffect(() => {
-        const month = new Date().getMonth();
-
-        if (month >= 3 && month < 6) {
-            setBackgroundImage(spring);
-        } else if (month >= 6 && month < 9) {
-            setBackgroundImage(summer);
-        } else if (month >= 9 && month < 12) {
-            setBackgroundImage(autumn);
-        } else {
-            setBackgroundImage(winter);
-        }
-    }, []);
+    const backgroundImage = useBackgroundImage();
 
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState('');

@@ -6,8 +6,10 @@ import Main from './pages/main/Main';
 import Footer from './pages/footer/Footer';
 import TodoList from './pages/todoList/TodoList';
 import Menu from './pages/menu/Menu';
-import MenuCategoryes from './components/MenuCategoryes';
-import AddRecipe from './components/AddRecipe';
+import MenuCategoryes from './components/categories/MenuCategoryes';
+import AddRecipe from './components/addRecipe/AddRecipe';
+import AllRecipes from './components/allRecipes/AllRecipes';
+import CategoriesProduct from './components/categoriesProducts/CategoriesProduct';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/caregoryes" element={<MenuCategoryes />} />
         <Route path="/addrecipe" element={<AddRecipe />} />
+        <Route path="/allrecipes" element={<AllRecipes />} />
+        <Route path="/categories/:categoryId" element={<CategoriesProduct />} />
       </Routes>
      <Footer />
     </div>

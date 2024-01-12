@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import autumn from "../assets/images/todoautumn.jpg"
-import spring from "../assets/images/todospring.jpg"
-import summer from "../assets/images/todosummer.jpg"
-import winter from "../assets/images/todowinter.jpg"
 import styles from "./MenuCategoryes.module.css"
+import { useNavigate } from "react-router-dom";
+import useBackgroundImage from "../../useBackgroundImage";
 
 function MenuCategoryes(){
     const [categories, setCategories] = useState([]);
-    const [backgroundImage, setBackgroundImage] = useState('');
+    const backgroundImage = useBackgroundImage();
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -25,16 +24,7 @@ function MenuCategoryes(){
 
         fetchCategories();
 
-        const month = new Date().getMonth();
-        if (month >= 3 && month < 6) {
-            setBackgroundImage(spring);
-        } else if (month >= 6 && month < 9) {
-            setBackgroundImage(summer);
-        } else if (month >= 9 && month < 12) {
-            setBackgroundImage(autumn);
-        } else {
-            setBackgroundImage(winter);
-        }
+        
         }, []);
 
 
@@ -47,7 +37,12 @@ function MenuCategoryes(){
             
         <div className={styles.card} key={category.id}>
             <h2 className={styles.name}>{category.name}</h2>
-            <img className={styles.iconStyle} src={`http://localhost:3001${category.imageUrl}`} alt={category.name} />
+            <img 
+            className={styles.iconStyle} 
+            src={`http://localhost:3001${category.imageUrl}`} 
+            alt={category.name} 
+             onClick={() => navigate(`/categories/${category.id}`)}
+             />
         </div>
         
     ))}
