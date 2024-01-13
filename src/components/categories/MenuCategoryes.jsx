@@ -30,7 +30,10 @@ function MenuCategoryes(){
 
     return (
         <div className={styles.menuDiv} style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <div className={styles.btnTitle}>
+        <button className={styles.btn} onClick={() => navigate("/menu")}>back</button>
              <h2 className={styles.title}>CATEGORIES</h2>
+             </div>
             <div className={styles.cardDiv}>
                
         {categories.map(category => (

@@ -5,12 +5,14 @@
     background-position: center;
     text-align: center;
    padding-top: 10px;
+   
 }
 .title{
     font-size: 35px;
     color: #6C5B7B;
-    
+   margin: auto;
    font-weight: 700;
+  
 }
 .iconStyle{
     width: 200px;
@@ -39,4 +41,24 @@
     border: 2px solid  #6C5B7B;
     width: 215px;
     background-color: #F67280;
+}
+.btnTitle{
+    display: flex;
+    
+}
+.btn{
+    padding: 8px 12px;
+    margin-left: 100px;
+    width: 100px;
+    background-color: #6C5B7B;
+    border: none;
+    border-radius: 8px;
+    color: #fdc8b3;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: #43394d;
+    transition: 0.5s;
 }

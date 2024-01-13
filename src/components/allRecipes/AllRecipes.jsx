@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 
 import styles from "./AllRecipes.module.css"
 import useBackgroundImage from "../../useBackgroundImage";
+import { useNavigate } from "react-router-dom";
 
 function AllRecipes (){
     const [recipes, setRecipes] = useState([]);
     const [selectedRecipeId, setSelectedRecipeId] = useState(null);
     const [showConfirmationModal, setShowConfirmationModal] = useState(false);
     const backgroundImage = useBackgroundImage();
+    const navigate = useNavigate()
     useEffect(() => {
         
         const fetchData = async () => {
@@ -49,7 +51,10 @@ function AllRecipes (){
 
     return (
         <div className={styles.allRecipesDiv} style={{ backgroundImage: `url(${backgroundImage})` }}>
-            <h2 className={styles.title}>All Recipes</h2>
+            <div className={styles.btnTitle}>
+        <button className={styles.btnTwo} onClick={() => navigate("/menu")}>back</button>
+             <h2 className={styles.title}>All Recipes</h2>
+             </div>
             <div className={styles.cardDiv}>
                 {recipes.length > 0 ? (
                     recipes.map((recipe) => (

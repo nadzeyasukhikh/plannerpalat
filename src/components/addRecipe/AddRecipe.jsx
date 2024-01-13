@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./AddRecipe.module.css";
 import useBackgroundImage from "../../useBackgroundImage";
+import { useNavigate } from "react-router-dom";
 
 
 function AddRecipe() {
@@ -14,6 +15,8 @@ function AddRecipe() {
   const [categoryIdError, setCategoryIdError] = useState(""); 
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const backgroundImage = useBackgroundImage();
+
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -93,7 +96,10 @@ function AddRecipe() {
 
   return (
     <div className={styles.addRecip} style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <h2 className={styles.title}>ADD RECIPE</h2>
+       <div className={styles.btnTitle}>
+        <button className={styles.btnTwo} onClick={() => navigate("/menu")}>back</button>
+             <h2 className={styles.title}>Add Recipe</h2>
+             </div>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Recipe name:</label>
@@ -121,7 +127,7 @@ function AddRecipe() {
           <label>Image:</label>
           <input type="file" onChange={(e) => setImage(e.target.files[0])} />
         </div>
-        <button type="submit">Add recipe</button>
+        <button className={styles.addBtn} type="submit">Add recipe</button>
       </form>
       {showSuccessModal && (
         <div className={styles.modal}>
