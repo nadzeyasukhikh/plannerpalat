@@ -10,6 +10,7 @@ import MenuCategoryes from './components/categories/MenuCategoryes';
 import AddRecipe from './components/addRecipe/AddRecipe';
 import AllRecipes from './components/allRecipes/AllRecipes';
 import CategoriesProduct from './components/categoriesProducts/CategoriesProduct';
+import FullRecipe from './components/fullRecipe/FullRecipe';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/addrecipe" element={<AddRecipe />} />
         <Route path="/allrecipes" element={<AllRecipes />} />
         <Route path="/categories/:categoryId" element={<CategoriesProduct />} />
+        <Route path="/fullrecipe/:recipeId" element={<FullRecipe />} />
       </Routes>
      <Footer />
     </div>

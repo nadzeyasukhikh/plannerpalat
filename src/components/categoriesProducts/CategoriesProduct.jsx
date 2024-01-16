@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./CategoriesProduct.module.css"
 import useBackgroundImage from "../../useBackgroundImage";
 
@@ -9,7 +9,7 @@ function CategoriesProduct() {
   const backgroundImage = useBackgroundImage();
   const [selectedRecipeId, setSelectedRecipeId] = useState(null);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
-
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchRecipesByCategory = async () => {
       try {
@@ -52,11 +52,14 @@ function CategoriesProduct() {
 
   return (
     <div className={styles.allRecipesDiv} style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className={styles.btnTitle}>
+        <button className={styles.btnTwo} onClick={() => navigate("/caregoryes")}>back</button>
       <h2 className={styles.title}>Recipes for Category {recipes.length > 0 ? recipes[0].Category.name : ''}</h2>
+      </div>
       <div className={styles.cardDiv}>
       {recipes.length > 0 ? (
         recipes.map((recipe) => (
-          <div className={styles.card} key={recipe.id}>
+          <div className={styles.card} key={recipe.id} onClick={() => navigate(`/fullrecipe/${recipe.id}`)}>
             <img className={styles.iconStyle} src={recipe.imageUrl} alt={recipe.title} />
             <p className={styles.name}>{recipe.title}</p>
             <button className={styles.btn} onClick={() => {

@@ -9,7 +9,7 @@
 .title{
     font-size: 35px;
     color: #6C5B7B;
-    padding-top: 20px;
+    margin: auto;
    font-weight: 700;
 }
 .iconStyle{
@@ -118,4 +118,24 @@
     font-weight: bold;
     color: #6C5B7B;
     margin-bottom: 20px;
+}
+.btnTitle{
+    display: flex;
+    
+}
+.btnTwo{
+    padding: 8px 12px;
+    margin-left: 10px;
+    width: 100px;
+    background-color: #6C5B7B;
+    border: none;
+    border-radius: 8px;
+    color: #fdc8b3;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btnTwo:hover{
+    background-color: #43394d;
+    transition: 0.5s;
 }

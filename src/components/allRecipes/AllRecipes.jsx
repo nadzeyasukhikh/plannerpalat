@@ -58,7 +58,7 @@ function AllRecipes (){
             <div className={styles.cardDiv}>
                 {recipes.length > 0 ? (
                     recipes.map((recipe) => (
-                        <div className={styles.card} key={recipe.id}>
+                        <div className={styles.card} key={recipe.id} onClick={() => navigate(`/fullrecipe/${recipe.id}`)}>
                             <img className={styles.iconStyle} src={recipe.imageUrl} alt={recipe.title} />
                             <p className={styles.name}>{recipe.title}</p>
                             <button className={styles.btn} onClick={() => {
